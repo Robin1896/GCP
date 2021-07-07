@@ -1,0 +1,247 @@
+#slogan {
+  padding: 20px;
+  justify-content: center;
+  text-align: center;
+}
+.flatCard {
+  width: 50% !important;
+}
+
+.arrows {
+  width: 60px;
+  height: 72px;
+  position: fixed;
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 50%;
+  margin-left: -6px;
+  bottom: 0;
+}
+.press {
+  bottom: 0;
+  position: fixed;
+  margin-bottom: 60%;
+  margin-left: -10px;
+}
+
+.border {
+  border: 2px solid rgba(45, 55, 72, var(--text-opacity));
+}
+.arrows path {
+  stroke: #ffffff;
+  fill: transparent;
+  stroke-width: 3px;
+  animation: arrow 2s infinite;
+  -webkit-animation: arrow 2s infinite;
+}
+
+.sizes {
+  width: 0.9em !important;
+}
+
+@keyframes arrow {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/ {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.arrows path.a1 {
+  animation-delay: -1s;
+  -webkit-animation-delay: -1s; /* Safari 和 Chrome */
+}
+
+.arrows path.a2 {
+  animation-delay: -0.5s;
+  -webkit-animation-delay: -0.5s; /* Safari 和 Chrome */
+}
+
+.arrows path.a3 {
+  animation-delay: 0s;
+  -webkit-animation-delay: 0s; /* Safari 和 Chrome */
+}
+
+#turn {
+  background-color: white;
+  z-index: 99;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  img {
+    width: 25%;
+    margin: 0 auto;
+    margin-top: 10%;
+  }
+}
+
+.leaf {
+  background-color: #8db364;
+}
+
+.custom {
+  padding: 10px;
+}
+.modal-window {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.25);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+  overflow-y: scroll;
+  width: 100%;
+  &:target {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  & > div {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: auto;
+    padding-top: 35vh;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.bebas {
+  font-family: "bebas";
+}
+
+@font-face {
+  font-family: "bebas";
+  font-style: bold;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/BebasNeue-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "montserrat";
+  font-style: regular;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/Montserrat-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "montserrat-bold";
+  font-style: regular;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/Montserrat-Bold.ttf") format("truetype");
+}
+
+.montserrat {
+  font-family: "montserrat";
+}
+
+.montserrat-bold {
+  font-family: "montserrat-bold";
+}
+
+.modal-close {
+  color: white;
+  line-height: 50px;
+  position: absolute;
+  right: 7px;
+  text-align: center;
+  top: 32.6vh;
+  width: 70px;
+  text-decoration: none;
+}
+
+/* Demo Styles */
+
+.modal-window div:not(:last-of-type) {
+  margin-bottom: 15px;
+}
+
+.slidecontainer {
+  width: 100%; /* Width of the outside container */
+}
+.bottom-3 {
+  bottom: -3rem;
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  width: 90%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: linear-gradient(
+    331deg,
+    rgba(245, 143, 31, 1) 0%,
+    rgba(255, 221, 133, 1) 100%
+  );
+  outline: none; /* Remove outline */
+  opacity: 1; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+  border-radius: 9999px;
+  border-color: white;
+  border-width: 6px;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 35px; /* Set a specific slider handle width */
+  height: 35px; /* Slider handle height */
+  background: black; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 9999px;
+  border-width: 6px;
+  color: white;
+  background-color: white;
+  border: 6px solid white;
+  box-shadow: 2px 2px 3px 3px rgba(0, 0, 0, 0.63);
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: black; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 9999px;
+  border-color: black;
+  border-width: 6px;
+  color: black;
+  background-color: black;
+}
